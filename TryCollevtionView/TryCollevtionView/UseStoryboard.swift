@@ -15,7 +15,7 @@ protocol FromStoryboard {
 extension FromStoryboard {
     static func fromStoryboard() -> Self? {
         // Storyboard name expected same name as class name
-        let storyboard = UIStoryboard(name: String(describing: Self.self), bundle: Bundle(for: Self.self as! AnyClass))
+        let storyboard = UIStoryboard(name: String(describing: Self.self), bundle: nil)
         return storyboard.instantiateInitialViewController() as? Self
     }
 }
