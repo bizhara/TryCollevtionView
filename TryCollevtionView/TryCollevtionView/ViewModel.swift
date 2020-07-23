@@ -13,5 +13,18 @@ extension ViewController {
         var titleString: String? {
             return Bundle.main.infoDictionary?["CFBundleName"] as? String
         }
+
+        var changedCellDataAction: (() -> Void)?
+        var cellData: [CollectionViewCellData]? {
+            didSet {
+                changedCellDataAction?()
+            }
+        }
+        var numberOfSections: Int {
+            return 1
+        }
+        func numberOfItems(of section: Int) -> Int {
+            return section == 0 ? cellData?.count ?? 0 : 0
+        }
     }
 }

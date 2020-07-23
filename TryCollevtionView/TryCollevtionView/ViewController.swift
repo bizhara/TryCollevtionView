@@ -17,6 +17,39 @@ class ViewController: UIViewController, FromStoryboard {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         titleLabel.text = viewModel.titleString
+
+        collectionView.register(
+            UINib(nibName: CollectionViewCell.nibName, bundle: nil),
+            forCellWithReuseIdentifier: CollectionViewCell.reuseId
+        )
+
+        viewModel.changedCellDataAction = { [weak self] () in
+            self?.collectionView.reloadData()
+        }
+        viewModel.cellData = MockCellData.mockCellData
     }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberOfSections
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfItems(of: section)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseId, for: indexPath)
+        if let myCell = cell as? CollectionViewCell {
+            myCell.cellData = viewModel.cellData?[indexPath.row]
+        }
+        return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+
 }
