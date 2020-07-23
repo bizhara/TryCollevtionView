@@ -9,8 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, FromStoryboard {
+    @IBOutlet private weak var titleLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        titleLabel.text = Bundle.main.infoDictionary?["CFBundleName"] as? String
     }
 }
