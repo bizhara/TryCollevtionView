@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, FromStoryboard {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    private let viewModel: ViewModel = ViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = Bundle.main.infoDictionary?["CFBundleName"] as? String
+        titleLabel.text = viewModel.titleString
     }
 }

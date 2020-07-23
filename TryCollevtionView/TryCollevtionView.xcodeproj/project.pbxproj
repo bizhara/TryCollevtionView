@@ -15,6 +15,7 @@
 		7240103024C9618500D82D8D /* TryCollevtionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240102F24C9618500D82D8D /* TryCollevtionViewTests.swift */; };
 		7240103B24C9618500D82D8D /* TryCollevtionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240103A24C9618500D82D8D /* TryCollevtionViewUITests.swift */; };
 		7240104924C963E900D82D8D /* UseStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240104824C963E900D82D8D /* UseStoryboard.swift */; };
+		7273302024C9A0F8001E7B0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273301F24C9A0F8001E7B0C /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7240103A24C9618500D82D8D /* TryCollevtionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryCollevtionViewUITests.swift; sourceTree = "<group>"; };
 		7240103C24C9618500D82D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7240104824C963E900D82D8D /* UseStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseStoryboard.swift; sourceTree = "<group>"; };
+		7273301F24C9A0F8001E7B0C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				7240101824C9618300D82D8D /* AppDelegate.swift */,
 				7240101C24C9618300D82D8D /* ViewController.swift */,
 				7240101E24C9618300D82D8D /* ViewController.storyboard */,
+				7273301F24C9A0F8001E7B0C /* ViewModel.swift */,
 				7240104824C963E900D82D8D /* UseStoryboard.swift */,
 				7240102124C9618500D82D8D /* Assets.xcassets */,
 				7240102324C9618500D82D8D /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				7240101D24C9618300D82D8D /* ViewController.swift in Sources */,
 				7240101924C9618300D82D8D /* AppDelegate.swift in Sources */,
+				7273302024C9A0F8001E7B0C /* ViewModel.swift in Sources */,
 				7240104924C963E900D82D8D /* UseStoryboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
