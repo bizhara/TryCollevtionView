@@ -9,15 +9,13 @@
 import UIKit
 
 protocol FromStoryboard {
-    static func fromStoryboard<T>() -> T? where T: UIViewController
+    static func fromStoryboard() -> Self?
 }
 
 extension FromStoryboard {
-    static func fromStoryboard<T>() -> T? where T: UIViewController {
+    static func fromStoryboard() -> Self? {
         // Storyboard name expected same name as class name
-        let storyboard = UIStoryboard(name: String(describing: T.self), bundle: Bundle(for: T.self))
-        return storyboard.instantiateInitialViewController() as? T
+        let storyboard = UIStoryboard(name: String(describing: Self.self), bundle: Bundle(for: Self.self as! AnyClass))
+        return storyboard.instantiateInitialViewController() as? Self
     }
 }
-
-extension UIViewController: FromStoryboard {}
