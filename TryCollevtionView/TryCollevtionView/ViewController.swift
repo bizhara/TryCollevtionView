@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, FromStoryboard {
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
