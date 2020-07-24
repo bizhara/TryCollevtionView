@@ -26,10 +26,16 @@ class ViewController: UIViewController, FromStoryboard {
             forCellWithReuseIdentifier: CollectionViewCell.reuseId
         )
 
-        viewModel.changedCellDataAction = { [weak self] () in
-            self?.collectionView.reloadData()
+        viewModel.changedCellDataAction = { [collectionView] () in
+            collectionView?.reloadData()
         }
-        viewModel.cellData = MockCellData.mockCellData
+        getCellData { [viewModel] cellData in
+            viewModel.cellData = cellData
+        }
+    }
+
+    func getCellData(completion: ([CollectionViewCellData]?) -> Void) {
+        completion(MockCellData.mockCellData)
     }
 }
 
