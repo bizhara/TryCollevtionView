@@ -27,7 +27,9 @@ class ViewController: UIViewController, FromStoryboard {
         )
 
         viewModel.changedCellDataAction = { [collectionView] () in
-            collectionView?.reloadData()
+            DispatchQueue.main.async {
+                collectionView?.reloadData()
+            }
         }
         getCellData { [viewModel] cellData in
             viewModel.cellData = cellData
