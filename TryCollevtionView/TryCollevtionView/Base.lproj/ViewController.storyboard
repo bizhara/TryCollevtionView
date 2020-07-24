@@ -22,8 +22,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-i0-hUZ">
+                                <rect key="frame" x="0.0" y="105" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="UMH-Xs-hGQ"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVC-8a-b6J">
-                                <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jNf-dL-lLH">
                                     <size key="itemSize" width="128" height="128"/>
@@ -40,12 +47,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="fZ7-i0-hUZ" firstAttribute="top" secondItem="p1z-EO-hd3" secondAttribute="bottom" constant="20" id="Jq0-nz-FGe"/>
+                            <constraint firstItem="fZ7-i0-hUZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QHK-sW-b6u"/>
+                            <constraint firstItem="AVC-8a-b6J" firstAttribute="top" secondItem="fZ7-i0-hUZ" secondAttribute="bottom" id="RSc-yQ-tEg"/>
                             <constraint firstItem="AVC-8a-b6J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a8b-Gi-piw"/>
+                            <constraint firstItem="fZ7-i0-hUZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bFI-SZ-aM1"/>
                             <constraint firstItem="AVC-8a-b6J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jfC-hZ-5GG"/>
                             <constraint firstItem="AVC-8a-b6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kUk-do-9Lr"/>
                             <constraint firstItem="p1z-EO-hd3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="m89-8n-qbX"/>
                             <constraint firstItem="p1z-EO-hd3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pju-g7-j6V"/>
-                            <constraint firstItem="AVC-8a-b6J" firstAttribute="top" secondItem="p1z-EO-hd3" secondAttribute="bottom" constant="20" id="y9v-da-y7Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
