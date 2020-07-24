@@ -9,8 +9,16 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell, CellNames {
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var detailLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
+    @IBOutlet private weak var detailLabel: UILabel! {
+        didSet {
+            detailLabel.translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
 
     var cellData: CollectionViewCellData? {
         didSet {
@@ -22,5 +30,16 @@ class CollectionViewCell: UICollectionViewCell, CellNames {
                 detailLabel.text = nil
             }
         }
+    }
+
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        let layoutAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
+        layoutIfNeeded()
+        layoutAttributes.frame.size = systemLayoutSizeFitting(
+            UIView.layoutFittingCompressedSize,
+            withHorizontalFittingPriority: .required,
+            verticalFittingPriority: .fittingSizeLevel
+        )
+        return layoutAttributes
     }
 }

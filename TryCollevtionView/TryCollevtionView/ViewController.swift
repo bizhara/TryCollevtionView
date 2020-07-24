@@ -20,6 +20,7 @@ class ViewController: UIViewController, FromStoryboard {
 
         titleLabel.text = viewModel.titleString
 
+        collectionView.collectionViewLayout = CollectionViewLayout()
         collectionView.register(
             UINib(nibName: CollectionViewCell.nibName, bundle: nil),
             forCellWithReuseIdentifier: CollectionViewCell.reuseId
