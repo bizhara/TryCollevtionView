@@ -12,7 +12,7 @@ class CollectionViewLayout: UICollectionViewFlowLayout {
     override init() {
         super.init()
         estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        minimumLineSpacing = 0
+        minimumLineSpacing = 0.5
         minimumInteritemSpacing = 0
     }
 
