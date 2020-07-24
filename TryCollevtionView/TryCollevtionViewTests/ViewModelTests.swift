@@ -27,4 +27,12 @@ class ViewModelTests: XCTestCase {
     func testNumberOfItems() {
         XCTAssertEqual(viewModel.numberOfItems(of: 0), MockCellData.mockCellData.count)
     }
+
+    func testCellData() {
+        let cellIndex = 3
+        let cellData = viewModel.cellData?[cellIndex]
+        let mockData = MockCellData.mockCellData[cellIndex]
+        XCTAssertEqual(cellData?.titleString, mockData.titleString)
+        XCTAssertEqual(cellData?.detailString, mockData.detailString)
+    }
 }
