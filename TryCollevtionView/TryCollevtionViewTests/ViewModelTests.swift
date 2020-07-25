@@ -10,26 +10,28 @@ import XCTest
 @testable import TryCollevtionView
 
 class ViewModelTests: XCTestCase {
-    private let viewModel = ViewController.ViewModel()
-
-    override func setUpWithError() throws {
-        viewModel.cellData = MockCellData.mockCellData
-    }
-
     func testTitleString() {
+        let viewModel = ViewController.ViewModel()
         XCTAssertEqual(viewModel.titleString, Bundle.main.infoDictionary?["CFBundleName"] as? String)
     }
 
     func testNumberOfSections() {
+        let viewModel = ViewController.ViewModel()
         XCTAssertEqual(viewModel.numberOfSections, 1)
     }
 
     func testNumberOfItems() {
-        XCTAssertEqual(viewModel.numberOfItems(of: 0), MockCellData.mockCellData.count)
+        let section = 0
+        let viewModel = ViewController.ViewModel()
+        XCTAssertEqual(viewModel.numberOfItems(of: section), 0)
+        viewModel.cellData = MockCellData.mockCellData
+        XCTAssertEqual(viewModel.numberOfItems(of: section), MockCellData.mockCellData.count)
     }
 
     func testCellData() {
         let cellIndex = 3
+        let viewModel = ViewController.ViewModel()
+        viewModel.cellData = MockCellData.mockCellData
         let cellData = viewModel.cellData?[cellIndex]
         let mockData = MockCellData.mockCellData[cellIndex]
         XCTAssertEqual(cellData?.titleString, mockData.titleString)
