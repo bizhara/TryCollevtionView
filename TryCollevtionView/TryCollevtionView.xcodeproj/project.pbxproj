@@ -122,8 +122,7 @@
 				7273302A24C9C160001E7B0C /* CollectionViewCell.xib */,
 				7273302524C9AF9A001E7B0C /* CollectionViewCellData.swift */,
 				7273302324C9AF44001E7B0C /* MockCellData.swift */,
-				7240104824C963E900D82D8D /* UseStoryboard.swift */,
-				7273302724C9C056001E7B0C /* UseXib.swift */,
+				7264FA9B24D19FED00B6EBB6 /* Commons */,
 				7240102124C9618500D82D8D /* Assets.xcassets */,
 				7240102324C9618500D82D8D /* LaunchScreen.storyboard */,
 				7240102624C9618500D82D8D /* Info.plist */,
@@ -147,6 +146,15 @@
 				7240103C24C9618500D82D8D /* Info.plist */,
 			);
 			path = TryCollevtionViewUITests;
+			sourceTree = "<group>";
+		};
+		7264FA9B24D19FED00B6EBB6 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				7240104824C963E900D82D8D /* UseStoryboard.swift */,
+				7273302724C9C056001E7B0C /* UseXib.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
