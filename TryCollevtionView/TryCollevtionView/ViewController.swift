@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController, UseStoryboard {
+final class ViewController: UIViewController, UseStoryboard {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UseStoryboard {
 
         collectionView.collectionViewLayout = CollectionViewLayout()
         collectionView.register(
-            CollectionViewCell.xib(),
+            CollectionViewCell.xib,
             forCellWithReuseIdentifier: CollectionViewCell.reuseId
         )
 

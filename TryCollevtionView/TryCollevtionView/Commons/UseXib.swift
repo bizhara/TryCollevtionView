@@ -9,16 +9,15 @@
 import UIKit
 
 protocol UseXib {
-    static func xib() -> UINib
+    static var xib: UINib { get }
     static var xibName: String { get }
     static var reuseId: String { get }
 }
 
 extension UseXib {
-    static func xib() -> UINib {
+    static var xib: UINib {
         return UINib(nibName: xibName, bundle: nil)
     }
-
     static var xibName: String {
         // Xib name expected same name as class name
         return String(describing: Self.self)
