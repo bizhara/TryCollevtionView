@@ -8,14 +8,18 @@
 
 import UIKit
 
-protocol FromStoryboard {
+protocol UseStoryboard {
     static func fromStoryboard() -> Self?
 }
 
-extension FromStoryboard {
+extension UseStoryboard {
     static func fromStoryboard() -> Self? {
-        // Storyboard name expected same name as class name
-        let storyboard = UIStoryboard(name: String(describing: Self.self), bundle: nil)
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         return storyboard.instantiateInitialViewController() as? Self
+    }
+
+    static var storyboardName: String {
+        // Storyboard name expected same name as class name
+        return String(describing: Self.self)
     }
 }
