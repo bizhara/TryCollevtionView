@@ -33,13 +33,12 @@ class CollectionViewCell: UICollectionViewCell, UseXib {
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        let layoutAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
-        layoutIfNeeded()
-        layoutAttributes.frame.size = systemLayoutSizeFitting(
+        updateConstraintsIfNeeded()
+        systemLayoutSizeFitting(
             UIView.layoutFittingCompressedSize,
             withHorizontalFittingPriority: .required,
             verticalFittingPriority: .fittingSizeLevel
         )
-        return layoutAttributes
+        return super.preferredLayoutAttributesFitting(layoutAttributes)
     }
 }
