@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell, CellNames {
+class CollectionViewCell: UICollectionViewCell, UseXib {
     @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
             titleLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -8,16 +8,22 @@
 
 import UIKit
 
-protocol CellNames {
-    static var nibName: String { get }
+protocol UseXib {
+    static func xib() -> UINib
+    static var xibName: String { get }
     static var reuseId: String { get }
 }
 
-extension CellNames {
-    static var nibName: String {
+extension UseXib {
+    static func xib() -> UINib {
+        return UINib(nibName: xibName, bundle: nil)
+    }
+
+    static var xibName: String {
+        // Xib name expected same name as class name
         return String(describing: Self.self)
     }
     static var reuseId: String {
-        return String(describing: Self.self)
+        return xibName
     }
 }

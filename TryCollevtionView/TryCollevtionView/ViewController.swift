@@ -22,7 +22,7 @@ class ViewController: UIViewController, UseStoryboard {
 
         collectionView.collectionViewLayout = CollectionViewLayout()
         collectionView.register(
-            UINib(nibName: CollectionViewCell.nibName, bundle: nil),
+            CollectionViewCell.xib(),
             forCellWithReuseIdentifier: CollectionViewCell.reuseId
         )
 
