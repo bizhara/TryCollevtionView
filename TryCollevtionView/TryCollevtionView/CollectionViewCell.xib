@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,14 +20,14 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-Ev-Ugr">
                         <rect key="frame" x="16" y="-0.5" width="234" height="0.5"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="ciz-zT-MrL"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-fg-vGG">
-                        <rect key="frame" x="16" y="90" width="234" height="0.5"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="16" y="89.5" width="234" height="0.5"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="QfI-at-Bpg"/>
                         </constraints>
@@ -45,6 +46,7 @@
                     </label>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="top" secondItem="OyC-Ev-Ugr" secondAttribute="bottom" id="01O-eU-JQC"/>
                 <constraint firstItem="seY-tZ-Ouf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="4LG-xk-Zkd"/>
@@ -56,11 +58,10 @@
                 <constraint firstItem="XLQ-G3-TPi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PjN-Su-fnc"/>
                 <constraint firstAttribute="bottom" secondItem="XLQ-G3-TPi" secondAttribute="bottom" constant="16" id="S7i-kp-DaD"/>
                 <constraint firstAttribute="trailing" secondItem="XLQ-G3-TPi" secondAttribute="trailing" constant="16" id="dSl-Qu-5Gi"/>
-                <constraint firstItem="Xho-fg-vGG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="fr0-3i-Y7s"/>
+                <constraint firstItem="Xho-fg-vGG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="bottom" constant="-0.5" id="fr0-3i-Y7s"/>
                 <constraint firstAttribute="trailing" secondItem="seY-tZ-Ouf" secondAttribute="trailing" constant="16" id="lFC-Xs-azQ"/>
                 <constraint firstItem="Xho-fg-vGG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ri9-e9-nfH"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="250" height="89"/>
             <connections>
                 <outlet property="detailLabel" destination="XLQ-G3-TPi" id="lkI-31-i5p"/>
@@ -69,4 +70,9 @@
             <point key="canvasLocation" x="-194" y="-12"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
