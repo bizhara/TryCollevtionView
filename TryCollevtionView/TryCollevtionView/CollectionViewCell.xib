@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-fg-vGG">
-                        <rect key="frame" x="16" y="89.5" width="234" height="0.5"/>
+                        <rect key="frame" x="16" y="90" width="234" height="0.5"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="QfI-at-Bpg"/>
@@ -47,6 +47,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="top" secondItem="OyC-Ev-Ugr" secondAttribute="bottom" id="01O-eU-JQC"/>
                 <constraint firstItem="seY-tZ-Ouf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="4LG-xk-Zkd"/>
@@ -58,7 +59,7 @@
                 <constraint firstItem="XLQ-G3-TPi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PjN-Su-fnc"/>
                 <constraint firstAttribute="bottom" secondItem="XLQ-G3-TPi" secondAttribute="bottom" constant="16" id="S7i-kp-DaD"/>
                 <constraint firstAttribute="trailing" secondItem="XLQ-G3-TPi" secondAttribute="trailing" constant="16" id="dSl-Qu-5Gi"/>
-                <constraint firstItem="Xho-fg-vGG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="bottom" constant="-0.5" id="fr0-3i-Y7s"/>
+                <constraint firstItem="Xho-fg-vGG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="fr0-3i-Y7s"/>
                 <constraint firstAttribute="trailing" secondItem="seY-tZ-Ouf" secondAttribute="trailing" constant="16" id="lFC-Xs-azQ"/>
                 <constraint firstItem="Xho-fg-vGG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ri9-e9-nfH"/>
             </constraints>
