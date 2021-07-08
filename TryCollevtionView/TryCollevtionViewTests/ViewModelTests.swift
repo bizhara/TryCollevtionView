@@ -23,15 +23,12 @@ class ViewModelTests: XCTestCase {
     func testNumberOfItems() {
         let section = 0
         let viewModel = ViewController.ViewModel()
-        XCTAssertEqual(viewModel.numberOfItems(of: section), 0)
-        viewModel.cellData = MockCellData.mockCellData
         XCTAssertEqual(viewModel.numberOfItems(of: section), MockCellData.mockCellData.count)
     }
 
     func testCellData() {
         let cellIndex = 3
         let viewModel = ViewController.ViewModel()
-        viewModel.cellData = MockCellData.mockCellData
         let cellData = viewModel.cellData?[cellIndex]
         let mockData = MockCellData.mockCellData[cellIndex]
         XCTAssertEqual(cellData?.titleString, mockData.titleString)
