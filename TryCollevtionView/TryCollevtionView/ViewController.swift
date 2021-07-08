@@ -31,13 +31,6 @@ final class ViewController: UIViewController, UseStoryboard {
                 collectionView?.reloadData()
             }
         }
-        getCellData { [viewModel] cellData in
-            viewModel.cellData = cellData
-        }
-    }
-
-    func getCellData(completion: ([CollectionViewCellData]?) -> Void) {
-        completion(MockCellData.mockCellData)
     }
 }
 

@@ -15,14 +15,26 @@ extension ViewController {
         }
 
         var changedCellDataAction: (() -> Void)?
-        var cellData: [CollectionViewCellData]? {
+        private(set) var cellData: [CollectionViewCellData]? {
             didSet {
                 changedCellDataAction?()
             }
         }
+
         var numberOfSections: Int {
             return 1
         }
+
+        init() {
+            getCellData { [weak self] gotData in
+                self?.cellData = gotData
+            }
+        }
+
+        private func getCellData(completion: ([CollectionViewCellData]?) -> Void) {
+            completion(MockCellData.mockCellData)
+        }
+
         func numberOfItems(of section: Int) -> Int {
             return section == 0 ? cellData?.count ?? 0 : 0
         }
