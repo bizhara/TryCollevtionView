@@ -12,7 +12,7 @@
 		7240102024C9618300D82D8D /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7240101E24C9618300D82D8D /* ViewController.storyboard */; };
 		7240102224C9618500D82D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7240102124C9618500D82D8D /* Assets.xcassets */; };
 		7240102524C9618500D82D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7240102324C9618500D82D8D /* LaunchScreen.storyboard */; };
-		7240103024C9618500D82D8D /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240102F24C9618500D82D8D /* ViewModelTests.swift */; };
+		7240103024C9618500D82D8D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240102F24C9618500D82D8D /* ViewControllerTests.swift */; };
 		7240103B24C9618500D82D8D /* TryCollevtionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240103A24C9618500D82D8D /* TryCollevtionViewUITests.swift */; };
 		7240104924C963E900D82D8D /* UseStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240104824C963E900D82D8D /* UseStoryboard.swift */; };
 		72603D2E24CAAA22004559C2 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72603D2D24CAAA22004559C2 /* CollectionViewLayout.swift */; };
@@ -50,7 +50,7 @@
 		7240102424C9618500D82D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7240102624C9618500D82D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7240102B24C9618500D82D8D /* TryCollevtionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryCollevtionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7240102F24C9618500D82D8D /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		7240102F24C9618500D82D8D /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		7240103124C9618500D82D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7240103624C9618500D82D8D /* TryCollevtionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryCollevtionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7240103A24C9618500D82D8D /* TryCollevtionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryCollevtionViewUITests.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		7240102E24C9618500D82D8D /* TryCollevtionViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				7240102F24C9618500D82D8D /* ViewModelTests.swift */,
+				7240102F24C9618500D82D8D /* ViewControllerTests.swift */,
 				7240103124C9618500D82D8D /* Info.plist */,
 			);
 			path = TryCollevtionViewTests;
@@ -305,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7240103024C9618500D82D8D /* ViewModelTests.swift in Sources */,
+				7240103024C9618500D82D8D /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

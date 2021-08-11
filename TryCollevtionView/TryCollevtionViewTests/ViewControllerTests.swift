@@ -1,5 +1,5 @@
 //
-//  ViewModelTests.swift
+//  ViewControllerTests.swift
 //  TryCollevtionViewTests
 //
 //  Created by kazuaki on 2020/07/23.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import TryCollevtionView
 
-class ViewModelTests: XCTestCase {
+class ViewControllerTests: XCTestCase {
     func testTitleString() {
         let viewModel = ViewController.ViewModel()
         XCTAssertEqual(viewModel.titleString, Bundle.main.infoDictionary?["CFBundleName"] as? String)
