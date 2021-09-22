@@ -20,7 +20,8 @@ final class ViewController: UIViewController, UseStoryboard {
 
         titleLabel.text = viewModel.titleString
 
-        collectionView.collectionViewLayout = CollectionViewLayout()
+        collectionView.collectionViewLayout = createLayout()
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.register(
             CollectionViewCell.xib,
             forCellWithReuseIdentifier: CollectionViewCell.reuseId
@@ -31,6 +32,10 @@ final class ViewController: UIViewController, UseStoryboard {
                 collectionView?.reloadData()
             }
         }
+    }
+
+    private func createLayout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout.list(using: .init(appearance: .plain))
     }
 }
 

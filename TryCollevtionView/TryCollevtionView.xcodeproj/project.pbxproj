@@ -15,7 +15,6 @@
 		7240103024C9618500D82D8D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240102F24C9618500D82D8D /* ViewControllerTests.swift */; };
 		7240103B24C9618500D82D8D /* TryCollevtionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240103A24C9618500D82D8D /* TryCollevtionViewUITests.swift */; };
 		7240104924C963E900D82D8D /* UseStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7240104824C963E900D82D8D /* UseStoryboard.swift */; };
-		72603D2E24CAAA22004559C2 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72603D2D24CAAA22004559C2 /* CollectionViewLayout.swift */; };
 		7273302024C9A0F8001E7B0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273301F24C9A0F8001E7B0C /* ViewModel.swift */; };
 		7273302424C9AF44001E7B0C /* MockCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273302324C9AF44001E7B0C /* MockCellData.swift */; };
 		7273302624C9AF9A001E7B0C /* CollectionViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273302524C9AF9A001E7B0C /* CollectionViewCellData.swift */; };
@@ -56,7 +55,6 @@
 		7240103A24C9618500D82D8D /* TryCollevtionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryCollevtionViewUITests.swift; sourceTree = "<group>"; };
 		7240103C24C9618500D82D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7240104824C963E900D82D8D /* UseStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseStoryboard.swift; sourceTree = "<group>"; };
-		72603D2D24CAAA22004559C2 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		7273301F24C9A0F8001E7B0C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7273302324C9AF44001E7B0C /* MockCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCellData.swift; sourceTree = "<group>"; };
 		7273302524C9AF9A001E7B0C /* CollectionViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellData.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				7240101C24C9618300D82D8D /* ViewController.swift */,
 				7240101E24C9618300D82D8D /* ViewController.storyboard */,
 				7273301F24C9A0F8001E7B0C /* ViewModel.swift */,
-				72603D2D24CAAA22004559C2 /* CollectionViewLayout.swift */,
 				7273302924C9C160001E7B0C /* CollectionViewCell.swift */,
 				7273302A24C9C160001E7B0C /* CollectionViewCell.xib */,
 				7273302524C9AF9A001E7B0C /* CollectionViewCellData.swift */,
@@ -295,7 +292,6 @@
 				7240101924C9618300D82D8D /* AppDelegate.swift in Sources */,
 				7273302024C9A0F8001E7B0C /* ViewModel.swift in Sources */,
 				7273302624C9AF9A001E7B0C /* CollectionViewCellData.swift in Sources */,
-				72603D2E24CAAA22004559C2 /* CollectionViewLayout.swift in Sources */,
 				7240104924C963E900D82D8D /* UseStoryboard.swift in Sources */,
 				7273302824C9C056001E7B0C /* UseXib.swift in Sources */,
 			);
@@ -472,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TryCollevtionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TryCollevtionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
