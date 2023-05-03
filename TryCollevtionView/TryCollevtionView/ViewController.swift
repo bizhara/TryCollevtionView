@@ -19,7 +19,7 @@ final class ViewController: UIViewController, UseStoryboard {
         super.viewDidLoad()
 
         Task {
-            let result = await viewModel.getCellData()
+            let result = await viewModel.storeCellData()
             switch result {
             case .success:
                 await MainActor.run {

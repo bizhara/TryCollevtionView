@@ -20,7 +20,7 @@ extension ViewController {
             return 1
         }
 
-        func getCellData() async -> Result<Any, Error> {
+        func storeCellData() async -> Result<Any, Error> {
             cellData = await MockCellData.getMockData()
             return .success(())
         }
