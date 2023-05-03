@@ -14,10 +14,12 @@ extension ViewController {
             return Bundle.main.infoDictionary?["CFBundleName"] as? String
         }
 
-        var changedCellDataAction: (() -> Void)?
+        var changedCellDataAction: (() async -> Void)?
         private(set) var cellData: [CollectionViewCellData]? {
             didSet {
-                changedCellDataAction?()
+                Task {
+                    await changedCellDataAction?()
+                }
             }
         }
 

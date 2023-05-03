@@ -28,7 +28,7 @@ final class ViewController: UIViewController, UseStoryboard {
         )
 
         viewModel.changedCellDataAction = { [collectionView] () in
-            DispatchQueue.main.async {
+            await MainActor.run {
                 collectionView?.reloadData()
             }
         }
