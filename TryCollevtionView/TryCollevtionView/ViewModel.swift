@@ -34,7 +34,9 @@ extension ViewController {
         }
 
         private func getCellData(completion: ([CollectionViewCellData]?) -> Void) {
-            completion(MockCellData.mockCellData)
+            MockCellData.getMockData { mockDataArray in
+                completion(mockDataArray)
+            }
         }
 
         func getCellData(by row: Int) -> CollectionViewCellData? {
