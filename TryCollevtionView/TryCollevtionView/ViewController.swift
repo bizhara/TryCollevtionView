@@ -51,7 +51,8 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseId, for: indexPath)
         if let myCell = cell as? CollectionViewCell {
-            myCell.cellData = viewModel.cellData?[indexPath.row]
+            let cellData = viewModel.getCellData(by: indexPath.row)
+            myCell.setCellData(cellData)
         }
         return cell
     }

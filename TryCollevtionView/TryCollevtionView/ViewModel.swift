@@ -15,7 +15,7 @@ extension ViewController {
         }
 
         var changedCellDataAction: (() async -> Void)?
-        private(set) var cellData: [CollectionViewCellData]? {
+        private var cellData: [CollectionViewCellData]? {
             didSet {
                 Task {
                     await changedCellDataAction?()
@@ -35,6 +35,10 @@ extension ViewController {
 
         private func getCellData(completion: ([CollectionViewCellData]?) -> Void) {
             completion(MockCellData.mockCellData)
+        }
+
+        func getCellData(by row: Int) -> CollectionViewCellData? {
+            return cellData?[row]
         }
 
         func numberOfItems(of section: Int) -> Int {

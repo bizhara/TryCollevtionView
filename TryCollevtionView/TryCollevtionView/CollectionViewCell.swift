@@ -20,7 +20,7 @@ class CollectionViewCell: UICollectionViewCell, UseXib {
         }
     }
 
-    var cellData: CollectionViewCellData? {
+    private var cellData: CollectionViewCellData? {
         didSet {
             if let cellData = cellData {
                 titleLabel.text = cellData.titleString
@@ -30,6 +30,10 @@ class CollectionViewCell: UICollectionViewCell, UseXib {
                 detailLabel.text = nil
             }
         }
+    }
+
+    func setCellData(_ cellData: CollectionViewCellData?) {
+        self.cellData = cellData
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
