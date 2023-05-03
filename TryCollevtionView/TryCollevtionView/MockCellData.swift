@@ -20,12 +20,12 @@ struct MockCellData {
         CollectionViewCellData(title: "10: 1行に入り切らないセルタイトルにすると末尾が省略表示になる設定だがどうだろうか？", detail: "説明は複数行の設定にしてあるので、全部表示されるのが正解なのだが、どうだろうか？")
     ]
 
-    static func getMockData(completion: ([CollectionViewCellData]) -> Void) {
+    static func getMockData() async -> [CollectionViewCellData] {
         var mockDataArray = [CollectionViewCellData]()
         for mockData in mockCellData {
             let newData = CollectionViewCellData(title: mockData.titleString, detail: mockData.detailString)
             mockDataArray.append(newData)
         }
-        completion(mockDataArray)
+        return mockDataArray
     }
 }

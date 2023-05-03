@@ -18,6 +18,18 @@ final class ViewController: UIViewController, UseStoryboard {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Task {
+            let result = await viewModel.getCellData()
+            switch result {
+            case .success:
+                await MainActor.run {
+                    collectionView.reloadData()
+                }
+            case .failure:
+                return
+            }
+        }
+
         titleLabel.text = viewModel.titleString
 
         collectionView.collectionViewLayout = createLayout()
@@ -26,12 +38,6 @@ final class ViewController: UIViewController, UseStoryboard {
             CollectionViewCell.xib,
             forCellWithReuseIdentifier: CollectionViewCell.reuseId
         )
-
-        viewModel.changedCellDataAction = { [collectionView] () in
-            await MainActor.run {
-                collectionView?.reloadData()
-            }
-        }
     }
 
     private func createLayout() -> UICollectionViewLayout {

@@ -14,29 +14,15 @@ extension ViewController {
             return Bundle.main.infoDictionary?["CFBundleName"] as? String
         }
 
-        var changedCellDataAction: (() async -> Void)?
-        private var cellData: [CollectionViewCellData]? {
-            didSet {
-                Task {
-                    await changedCellDataAction?()
-                }
-            }
-        }
+        private var cellData: [CollectionViewCellData]?
 
         var numberOfSections: Int {
             return 1
         }
 
-        init() {
-            getCellData { [weak self] gotData in
-                self?.cellData = gotData
-            }
-        }
-
-        private func getCellData(completion: ([CollectionViewCellData]?) -> Void) {
-            MockCellData.getMockData { mockDataArray in
-                completion(mockDataArray)
-            }
+        func getCellData() async -> Result<Any, Error> {
+            cellData = await MockCellData.getMockData()
+            return .success(())
         }
 
         func getCellData(by row: Int) -> CollectionViewCellData? {
