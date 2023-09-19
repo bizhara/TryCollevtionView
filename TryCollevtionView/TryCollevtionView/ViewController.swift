@@ -13,7 +13,7 @@ final class ViewController: UIViewController, UseStoryboard {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
 
-    private let viewModel: ViewModel = ViewModel()
+    private let viewModel = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
